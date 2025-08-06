@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     docker-php-ext-install gd
 
 WORKDIR /var/www/html
-COPY dokuwiki_data/dokuwiki/ ./data
+
+COPY dokuwiki_data/dokuwiki/ ./
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
